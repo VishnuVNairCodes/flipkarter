@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 
 :root {
   /* || spacing || */
@@ -10,9 +10,10 @@
   --sp-twentys: 2.4rem;
   --sp-thirtys: 3.2rem;
   --sp-fourtys: 4.8rem;
+  --sp-fiftys: 5.6rem;
   --sp-sixtys: 6.4rem;
   --sp-eightys: 8rem;
-  --sp-ninetys: 9.6rem
+  --sp-ninetys: 9.6rem;
   --sp-hundreds: 12.8rem;
 
   /* || font size || */
@@ -46,6 +47,12 @@
   /* || shadows || */
   --sdw-card-1: rgba(0, 0, 0, 0.2);
   --sdw-card-2: rgba(0, 0, 0, 0.19);
+
+  /* || colors || */
+  --clr-white: #f0f0f0;
+  --clr-white-bg: #fff;
+  --clr-black: #000;
+  --clr-primary: #2874f0;
 }
 
 html {
@@ -62,7 +69,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: var(--f-tens-4);
   line-height: 1;
   font-weight: var(--fwt-normal);
@@ -76,4 +83,10 @@ select {
   font-size: inherit;
   font-family: inherit;
   padding: var(--sp-fractions3);
+}
+
+/* || General Utilities || */
+.flex-centered-vertical {
+  display: flex;
+  align-items: center;
 }

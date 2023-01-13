@@ -1,0 +1,6 @@
+.nav-container {
+  height: var(--sp-fiftys);
+  padding: 0 var(--sp-hundreds);
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}

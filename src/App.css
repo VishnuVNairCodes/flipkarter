@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+:root {
+  /* || spacing || */
+  --sp-fractions1: 2px;
+  --sp-fractions2: 4px;
+  --sp-fractions3: 8px;
+  --sp-tens1: 1.2rem;
+  --sp-tens2: 1.6rem;
+  --sp-twentys: 2.4rem;
+  --sp-thirtys: 3.2rem;
+  --sp-fourtys: 4.8rem;
+  --sp-sixtys: 6.4rem;
+  --sp-eightys: 8rem;
+  --sp-ninetys: 9.6rem
+  --sp-hundreds: 12.8rem;
+
+  /* || font size || */
+  --f-tens1: 1rem;
+  --f-tens2: 1.2rem;
+  --f-tens3: 1.4rem;
+  --f-tens4: 1.6rem;
+  --f-tens5: 1.8rem;
+  --f-twentys1: 2rem;
+  --f-twentys2: 2.4rem;
+  --f-thirtys1: 3rem;
+  --f-thirtys2: 3.6rem;
+  --f-fourtys: 4.4rem;
+  --f-fiftys: 5.2rem;
+  --f-sixtys: 6.2rem;
+  --f-seventys: 7.4rem;
+  --f-eightys: 8.6rem;
+  --f-ninetys: 9.8rem;
+
+  /* || font weights || */
+  --fwt-light: 300;
+  --fwt-normal: 400;
+  --fwt-bold: 700;
+  --fwt-heavy: 900;
+
+  /* || border radius || */
+  --br-1: 4px;
+  --br-2: 8px;
+  --br-3: 2rem;
+
+  /* || shadows || */
+  --sdw-card-1: rgba(0, 0, 0, 0.2);
+  --sdw-card-2: rgba(0, 0, 0, 0.19);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: var(--f-tens-4);
+  line-height: 1;
+  font-weight: var(--fwt-normal);
+  color: var(--clr-font-default);
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+  font-family: inherit;
+  padding: var(--sp-fractions3);
+}

@@ -1,0 +1,4 @@
+.product-list-main-container {
+  border-radius: var(--br-1);
+  background-color: blueviolet;
+}

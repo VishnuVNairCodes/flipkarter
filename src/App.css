@@ -40,9 +40,9 @@
   --fwt-heavy: 900;
 
   /* || border radius || */
-  --br-1: 4px;
-  --br-2: 8px;
-  --br-3: 2rem;
+  --br-1: 2px;
+  --br-2: 4px;
+  --br-3: 8px;
 
   /* || shadows || */
   --sdw-card-1: rgba(0, 0, 0, 0.2);
@@ -68,12 +68,20 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body,
+#root,
+.app {
+  height: 100%;
+}
+
 body {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: var(--f-tens-4);
   line-height: 1;
   font-weight: var(--fwt-normal);
   color: var(--clr-font-default);
+  background-color: red;
 }
 
 button,

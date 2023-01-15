@@ -1,7 +1,14 @@
 .product-card-container {
   justify-self: center;
   width: var(--width-product-card);
-  background-color: teal;
+  transition: box-shadow 0.3s ease-in, z-index 0.3s;
+}
+
+.product-card-container:hover {
+  box-shadow: 0 var(--sp-fractions2) var(--sp-fractions3) 0
+      var(--clr-sdw-card-1),
+    0 var(--sp-fractions3) var(--sp-twentys) 0 var(--clr-sdw-card-2);
+  z-index: 2;
 }
 
 /* || Product Card Image || */

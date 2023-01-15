@@ -48,8 +48,8 @@
   --br-3: 8px;
 
   /* || shadows || */
-  --sdw-card-1: rgba(0, 0, 0, 0.2);
-  --sdw-card-2: rgba(0, 0, 0, 0.19);
+  --clr-sdw-card-1: rgba(0, 0, 0, 0.2);
+  --clr-sdw-card-2: rgba(0, 0, 0, 0.19);
 
   /* || colors || */
   --clr-white: #f0f0f0;

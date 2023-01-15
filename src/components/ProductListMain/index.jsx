@@ -1,9 +1,7 @@
-import { productsData } from "../../../../data";
-import { ProductCard } from "../../../../components";
+import { ProductCard } from "..";
 import "./ProductListMain.css";
 
-const ProductListMain = () => {
-  const { products } = productsData;
+const ProductListMain = ({ products }) => {
   return (
     <main className="product-list-main-container">
       {products.map((product) => (

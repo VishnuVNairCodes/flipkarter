@@ -1,0 +1,78 @@
+.product-card-container {
+  justify-self: center;
+  width: var(--width-product-card);
+  background-color: teal;
+}
+
+/* || Product Card Image || */
+.product-card-img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: var(--height-product-card-img);
+  cursor: pointer;
+}
+
+/* || Product Card Info || */
+.product-card-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-fractions3);
+  background-color: var(--clr-white-bg);
+  padding: var(--sp-fractions3) var(--sp-tens2);
+}
+
+.product-card-info-brand {
+  color: var(--clr-font-secondary);
+  font-size: var(--f-tens3);
+  font-weight: var(--fwt-bold);
+}
+
+.product-card-info-desc-container {
+  display: flex;
+}
+
+.product-card-info-desc {
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.product-card-info-flipkart-assured {
+  margin-left: auto;
+  height: var(--f-tens5);
+}
+
+.product-card-info-price-container {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-fractions3);
+}
+
+.product-card-info-price-container .discounted-price {
+  font-size: var(--f-tens4);
+  font-weight: var(--fwt-bold);
+}
+
+.product-card-info-price-container .original-price {
+  color: var(--clr-font-secondary);
+}
+
+.product-card-info-price-container .discount-percent {
+  color: var(--clr-price-discount-percent);
+  font-size: var(--f-tens2);
+  font-weight: var(--fwt-bold);
+  letter-spacing: -0.2px;
+}
+
+.product-card-sizes-container {
+  display: flex;
+  gap: var(--sp-fractions3);
+}
+
+.product-card-sizes-heading {
+  color: var(--clr-font-secondary);
+  font-weight: var(--fwt-bold);
+}

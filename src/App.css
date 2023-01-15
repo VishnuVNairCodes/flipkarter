@@ -53,6 +53,15 @@
   --clr-white-bg: #fff;
   --clr-black: #000;
   --clr-primary: #2874f0;
+  --clr-font-primary: #212121;
+  --clr-font-secondary: #878787;
+  --clr-price-discount-percent: #388e3c;
+  --clr-product-list-bg: #f1f3f6;
+
+  /* || general || */
+  --width-productList-aside: 27rem;
+  --width-product-card: 29rem;
+  --height-product-card-img: 36rem;
 }
 
 html {
@@ -77,11 +86,10 @@ body,
 
 body {
   font-family: "Roboto", "Arial", sans-serif;
-  font-size: var(--f-tens-4);
-  line-height: 1;
+  font-size: var(--f-tens3);
+  line-height: 1.4;
   font-weight: var(--fwt-normal);
-  color: var(--clr-font-default);
-  background-color: red;
+  color: var(--clr-font-primary);
 }
 
 button,

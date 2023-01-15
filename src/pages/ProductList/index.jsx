@@ -1,4 +1,4 @@
-import { ProductListAside, ProductListMain } from "./components";
+import { ProductListAside, ProductListMain } from "../../components";
 
 import "./ProductList.css";
 

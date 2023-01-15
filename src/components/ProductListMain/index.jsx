@@ -1,5 +1,5 @@
-import { productsData } from "../../../../data";
-import { ProductCard } from "../../../../components";
+import { productsData } from "../../data";
+import { ProductCard } from "..";
 import "./ProductListMain.css";
 
 const ProductListMain = () => {

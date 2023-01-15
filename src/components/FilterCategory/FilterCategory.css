@@ -3,6 +3,7 @@
   background-color: var(--clr-white-bg);
   border-bottom: 1px solid var(--clr-grey-border);
   font-size: var(--f-tens2);
+  cursor: pointer;
 }
 
 /* || Filter Category Heading || */
@@ -10,15 +11,15 @@
   display: flex;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: var(--sp-tens2);
 }
 
 .filter-category-header-heading {
   font-size: inherit;
 }
 
-.filter-category-header i {
+.filter-category-header-icon {
   margin-left: auto;
+  color: var(--clr-font-secondary);
 }
 
 /* || Filter Category Options || */
@@ -27,6 +28,7 @@
   flex-direction: column;
   gap: var(--sp-tens1);
   font-size: var(--f-tens3);
+  margin-top: var(--sp-tens2);
 }
 
 .filter-category-options label {

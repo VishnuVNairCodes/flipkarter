@@ -1,12 +1,30 @@
 import { FilterCategory } from "..";
-import { productsData } from "../../data";
 import "./ProductListAside.css";
 
-const ProductListAside = () => {
-  const { products } = productsData;
-  const productFilters = ["gender", "sizes", "brand"];
+const ProductListAside = ({ products }) => {
+  const brandOptions = products
+    .map((product) => product.brand)
+    .reduce((accumulator, currentValue) => {
+      if (accumulator.includes(currentValue)) {
+        return accumulator;
+      }
+      return [...accumulator, currentValue];
+    }, []);
 
-  console.log("Products", products);
+  const productFilters = [
+    {
+      filterName: "gender",
+      filterOptions: ["girl", "boy", "unisex"],
+    },
+    {
+      filterName: "sizes",
+      filterOptions: ["S", "M", "L", "Free"],
+    },
+    {
+      filterName: "brand",
+      filterOptions: brandOptions,
+    },
+  ];
   return (
     <aside className="product-list-aside-container">
       <header className="product-list-aside-header">
@@ -17,8 +35,8 @@ const ProductListAside = () => {
       </header>
       {productFilters.map((productFilter) => (
         <FilterCategory
+          key={productFilter.filterName}
           productFilter={productFilter}
-          productFilterOptions={products[productFilter]}
         />
       ))}
     </aside>

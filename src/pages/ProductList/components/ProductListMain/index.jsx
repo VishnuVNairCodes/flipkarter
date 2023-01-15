@@ -1,10 +1,14 @@
+import { productsData } from "../../../../data";
 import { ProductCard } from "../../../../components";
 import "./ProductListMain.css";
 
 const ProductListMain = () => {
+  const { products } = productsData;
   return (
     <main className="product-list-main-container">
-      <ProductCard />
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </main>
   );
 };

@@ -1,4 +1,6 @@
 .product-list-main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   border-radius: var(--br-1);
-  background-color: blueviolet;
+  background-color: var(--clr-white-bg);
 }

@@ -1,0 +1,41 @@
+.filter-category-container {
+  padding: var(--sp-tens2);
+  background-color: var(--clr-white-bg);
+  border-bottom: 1px solid var(--clr-grey-border);
+  font-size: var(--f-tens2);
+}
+
+/* || Filter Category Heading || */
+.filter-category-header {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--sp-tens2);
+}
+
+.filter-category-header-heading {
+  font-size: inherit;
+}
+
+.filter-category-header i {
+  margin-left: auto;
+}
+
+/* || Filter Category Options || */
+.filter-category-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-tens1);
+  font-size: var(--f-tens3);
+}
+
+.filter-category-options label {
+  display: flex;
+  gap: var(--sp-fractions3);
+  text-transform: capitalize;
+}
+
+.filter-category-options .checkbox {
+  height: var(--sp-tens2);
+  width: var(--sp-tens2);
+}

@@ -1,7 +1,6 @@
 import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {
-  console.log(product);
   const {
     coverImg,
     brand,
@@ -38,7 +37,9 @@ const ProductCard = ({ product }) => {
         <div className="product-card-sizes-container">
           <p className="product-card-sizes-heading">Size</p>
           {sizes.map((size) => (
-            <p className="product-card-sizes">{size}</p>
+            <p key={size} className="product-card-sizes">
+              {size}
+            </p>
           ))}
         </div>
       </div>

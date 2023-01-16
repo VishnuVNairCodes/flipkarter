@@ -1,17 +1,21 @@
 import { useState } from "react";
+import { useFilter } from "../../contexts/filter-context";
 import "./FilterCategory.css";
 
-const FilterCategory = ({ productFilter: { filterName, filterOptions } }) => {
+const FilterCategory = ({ filterCategory }) => {
+  const { filterCategoryName, filterCategoryOptions } = filterCategory;
   const [isFilterOptionsCollapsed, setIsFilterOptionsCollapsed] =
     useState(true);
 
+  const { filterState, filterDispatch } = useFilter();
+
   return (
-    <section
-      onClick={() => setIsFilterOptionsCollapsed((prev) => !prev)}
-      className="filter-category-container"
-    >
-      <header className="filter-category-header">
-        <h3 className="filter-category-header-heading">{filterName}</h3>
+    <section className="filter-category-container">
+      <header
+        onClick={() => setIsFilterOptionsCollapsed((prev) => !prev)}
+        className="filter-category-header"
+      >
+        <h3 className="filter-category-header-heading">{filterCategoryName}</h3>
         <i
           className={`fa-solid fa-chevron-${
             isFilterOptionsCollapsed ? "down" : "up"
@@ -20,10 +24,21 @@ const FilterCategory = ({ productFilter: { filterName, filterOptions } }) => {
       </header>
       {!isFilterOptionsCollapsed && (
         <div className="filter-category-options">
-          {filterOptions.map((productFilterOption) => (
-            <label key={productFilterOption}>
-              <input type="checkbox" className="checkbox" />
-              {productFilterOption}
+          {filterCategoryOptions.map((filterCategoryOption) => (
+            <label key={filterCategoryOption}>
+              <input
+                type="checkbox"
+                name={filterCategoryOption}
+                checked={filterState[filterCategoryName][filterCategoryOption]}
+                onChange={() =>
+                  filterDispatch({
+                    type: "TOGGLE_FILTER_OPTION",
+                    payload: { filterCategoryName, filterCategoryOption },
+                  })
+                }
+                className="checkbox"
+              />
+              {filterCategoryOption}
             </label>
           ))}
         </div>

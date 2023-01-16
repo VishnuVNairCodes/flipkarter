@@ -3,7 +3,6 @@
   background-color: var(--clr-white-bg);
   border-bottom: 1px solid var(--clr-grey-border);
   font-size: var(--f-tens2);
-  cursor: pointer;
 }
 
 /* || Filter Category Heading || */
@@ -11,6 +10,7 @@
   display: flex;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .filter-category-header-heading {

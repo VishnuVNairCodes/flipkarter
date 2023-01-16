@@ -1,28 +1,20 @@
 import { FilterCategory } from "..";
+import { brandOptions } from "../../utils/get-brand-options";
 import "./ProductListAside.css";
 
-const ProductListAside = ({ products }) => {
-  const brandOptions = products
-    .map((product) => product.brand)
-    .reduce((accumulator, currentValue) => {
-      if (accumulator.includes(currentValue)) {
-        return accumulator;
-      }
-      return [...accumulator, currentValue];
-    }, []);
-
-  const productFilters = [
+const ProductListAside = () => {
+  const filterCategories = [
     {
-      filterName: "gender",
-      filterOptions: ["girl", "boy", "unisex"],
+      filterCategoryName: "gender",
+      filterCategoryOptions: ["girl", "boy", "unisex"],
     },
     {
-      filterName: "sizes",
-      filterOptions: ["S", "M", "L", "Free"],
+      filterCategoryName: "sizes",
+      filterCategoryOptions: ["S", "M", "L", "Free"],
     },
     {
-      filterName: "brand",
-      filterOptions: brandOptions,
+      filterCategoryName: "brands",
+      filterCategoryOptions: brandOptions,
     },
   ];
   return (
@@ -33,10 +25,10 @@ const ProductListAside = ({ products }) => {
           <button className="btn-clear-all">CLEAR ALL</button>
         </div>
       </header>
-      {productFilters.map((productFilter) => (
+      {filterCategories.map((filterCategory) => (
         <FilterCategory
-          key={productFilter.filterName}
-          productFilter={productFilter}
+          key={filterCategory.filterCategoryName}
+          filterCategory={filterCategory}
         />
       ))}
     </aside>

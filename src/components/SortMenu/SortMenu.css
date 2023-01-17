@@ -2,5 +2,42 @@
   grid-column: 1/-1;
   display: flex;
   gap: var(--sp-tens2);
-  padding: var(--sp-fractions3) var(--sp-tens2);
+  padding: var(--sp-tens2);
+}
+
+.sort-menu-heading {
+  font-size: var(--f-tens3);
+  font-weight: var(--fwt-semi-bold);
+}
+
+.btn-radio {
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.btn-radio .input-sort-radio,
+.btn-radio .label-sort-radio {
+  display: flex;
+}
+
+.btn-radio .input-sort-radio {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.btn-radio .label-sort-radio {
+  font-weight: var(--fwt-bold);
+  transition: all 0.1s;
+}
+
+.btn-radio .input-sort-radio:checked + .label-sort-radio {
+  color: var(--clr-primary);
+  border-bottom: var(--sp-fractions1) solid var(--clr-primary);
 }

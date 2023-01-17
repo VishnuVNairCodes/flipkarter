@@ -9,18 +9,20 @@ const brandFilters = brandOptions.reduce(
 );
 
 const filterStateInitial = {
-  gender: {
-    boy: false,
-    girl: false,
-    unisex: false,
+  toggleBasedFilters: {
+    gender: {
+      girl: false,
+      boy: false,
+      unisex: false,
+    },
+    sizes: {
+      S: false,
+      M: false,
+      L: false,
+      Free: false,
+    },
+    brand: brandFilters,
   },
-  sizes: {
-    S: false,
-    M: false,
-    L: false,
-    Free: false,
-  },
-  brands: brandFilters,
 };
 
 const filterReducerFunc = (filterState, filterAction) => {
@@ -31,13 +33,18 @@ const filterReducerFunc = (filterState, filterAction) => {
       } = filterAction;
       return {
         ...filterState,
-        [filterCategoryName]: {
-          ...filterState[filterCategoryName],
-          [filterCategoryOption]:
-            !filterState[filterCategoryName][filterCategoryOption],
+        toggleBasedFilters: {
+          ...filterState.toggleBasedFilters,
+          [filterCategoryName]: {
+            ...filterState.toggleBasedFilters[filterCategoryName],
+            [filterCategoryOption]:
+              !filterState.toggleBasedFilters[filterCategoryName][
+                filterCategoryOption
+              ],
+          },
         },
       };
-    case "CLEAR_FILTERS":
+    case "CLEAR_ALL_FILTERS":
       return {
         ...filterStateInitial,
       };

@@ -7,7 +7,10 @@ const FilterCategory = ({ filterCategory }) => {
   const [isFilterOptionsCollapsed, setIsFilterOptionsCollapsed] =
     useState(true);
 
-  const { filterState, filterDispatch } = useFilter();
+  const {
+    filterState: { toggleBasedFilters },
+    filterDispatch,
+  } = useFilter();
 
   return (
     <section className="filter-category-container">
@@ -29,7 +32,9 @@ const FilterCategory = ({ filterCategory }) => {
               <input
                 type="checkbox"
                 name={filterCategoryOption}
-                checked={filterState[filterCategoryName][filterCategoryOption]}
+                checked={
+                  toggleBasedFilters[filterCategoryName][filterCategoryOption]
+                }
                 onChange={() =>
                   filterDispatch({
                     type: "TOGGLE_FILTER_OPTION",

@@ -23,6 +23,7 @@ const filterStateInitial = {
     },
     brand: brandFilters,
   },
+  sortByPrice: "NULL",
 };
 
 const filterReducerFunc = (filterState, filterAction) => {
@@ -47,6 +48,11 @@ const filterReducerFunc = (filterState, filterAction) => {
     case "CLEAR_ALL_FILTERS":
       return {
         ...filterStateInitial,
+      };
+    case "SORT_BY_PRICE":
+      return {
+        ...filterState,
+        sortByPrice: filterAction.payload,
       };
     default:
       return filterState;

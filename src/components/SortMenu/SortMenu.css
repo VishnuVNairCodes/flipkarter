@@ -1,0 +1,6 @@
+.sort-menu {
+  grid-column: 1/-1;
+  display: flex;
+  gap: var(--sp-tens2);
+  padding: var(--sp-fractions3) var(--sp-tens2);
+}

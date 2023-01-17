@@ -1,28 +1,23 @@
 import { FilterCategory } from "..";
+import { useFilter } from "../../contexts/filter-context";
+import { brandOptions } from "../../utils/get-brand-options";
 import "./ProductListAside.css";
 
-const ProductListAside = ({ products }) => {
-  const brandOptions = products
-    .map((product) => product.brand)
-    .reduce((accumulator, currentValue) => {
-      if (accumulator.includes(currentValue)) {
-        return accumulator;
-      }
-      return [...accumulator, currentValue];
-    }, []);
+const ProductListAside = () => {
+  const { filterState, filterDispatch } = useFilter();
 
-  const productFilters = [
+  const filterCategories = [
     {
-      filterName: "gender",
-      filterOptions: ["girl", "boy", "unisex"],
+      filterCategoryName: "gender",
+      filterCategoryOptions: ["girl", "boy", "unisex"],
     },
     {
-      filterName: "sizes",
-      filterOptions: ["S", "M", "L", "Free"],
+      filterCategoryName: "sizes",
+      filterCategoryOptions: ["S", "M", "L", "Free"],
     },
     {
-      filterName: "brand",
-      filterOptions: brandOptions,
+      filterCategoryName: "brand",
+      filterCategoryOptions: brandOptions,
     },
   ];
   return (
@@ -30,13 +25,18 @@ const ProductListAside = ({ products }) => {
       <header className="product-list-aside-header">
         <div>
           <h2 className="product-list-aside-header-heading">Filters</h2>
-          <button className="btn-clear-all">CLEAR ALL</button>
+          <button
+            onClick={() => filterDispatch({ type: "CLEAR_ALL_FILTERS" })}
+            className="btn-clear-all"
+          >
+            CLEAR ALL
+          </button>
         </div>
       </header>
-      {productFilters.map((productFilter) => (
+      {filterCategories.map((filterCategory) => (
         <FilterCategory
-          key={productFilter.filterName}
-          productFilter={productFilter}
+          key={filterCategory.filterCategoryName}
+          filterCategory={filterCategory}
         />
       ))}
     </aside>

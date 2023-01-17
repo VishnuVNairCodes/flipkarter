@@ -7,7 +7,7 @@ const ProductList = () => {
   const { products } = productsData;
   return (
     <div className="product-list-container">
-      <ProductListAside products={products} />
+      <ProductListAside />
       <ProductListMain products={products} />
     </div>
   );

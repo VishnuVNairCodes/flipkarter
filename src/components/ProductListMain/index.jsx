@@ -15,10 +15,12 @@ const ProductListMain = ({ products }) => {
 
   return (
     <main className="product-list-main-container">
-      {!sortedAndFilteredProducts.length && (
+      {!sortedAndFilteredProducts.length ? (
         <p className="msg-no-products">No products available</p>
+      ) : (
+        <SortMenu />
       )}
-      <SortMenu />
+
       {sortedAndFilteredProducts.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

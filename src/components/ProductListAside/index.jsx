@@ -4,7 +4,7 @@ import { brandOptions } from "../../utils/get-brand-options";
 import "./ProductListAside.css";
 
 const ProductListAside = () => {
-  const { filterState, filterDispatch } = useFilter();
+  const { filterDispatch } = useFilter();
 
   const filterCategories = [
     {
